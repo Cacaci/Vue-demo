@@ -1,0 +1,5 @@
+{
+	"presets": ["es2015"],
+    "comments": false,
+    "plugins": ['transform-runtime', 'transform-object-rest-spread']
+}
