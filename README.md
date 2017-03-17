@@ -37,5 +37,5 @@ Segmentfault社区也有人翻译了作者的[原文](https://coligo.io/learn-vu
 
 ### 使用webpack2打包
 
-使用webpack2稍微做了调整  
+使用webpack2稍微做了调整，尝试将组件内容的css样式独立打包到单独的css文件中
 关于webpack2的相关教程，可参考[这边博文](http://www.qinshenxue.com/article/20161118151423.html)

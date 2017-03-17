@@ -1,3 +1,4 @@
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
   entry: './main.js',
   output: {
@@ -19,10 +20,31 @@ module.exports = {
       },
       {
         test: /\.vue$/,
-        use: ['vue-loader']
+        use: {
+          loader: 'vue-loader',
+          options: {
+            loaders: {
+              css: ExtractTextPlugin.extract({
+                use: 'css-loader'
+              })
+            }
+          }
+        }
+      },
+      {
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          use: 'css-loader'
+        })
       }
     ]
-  }/*,
+  },
+  plugins: [
+    new ExtractTextPlugin({
+      filename: '/common.css'
+    })
+  ]
+  /*,
   babel: {
     presets: ['es2015'],
     // vue中使用mapActions等辅助函数，需要安装transform-object-rest-spread插件

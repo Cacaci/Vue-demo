@@ -19,3 +19,16 @@ export default {
   }
 }
 </script>
+
+<style>
+#note-editor {
+  height: 100%;
+  margin-left: 380px;
+}
+
+#note-editor textarea {
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+}
+</style>
