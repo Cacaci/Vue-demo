@@ -25,6 +25,7 @@ module.exports = {
   },
   babel: {
     presets: ['es2015'],
-    plugins: ['transform-runtime']
+    // vue中使用mapActions等辅助函数，需要安装transform-object-rest-spread插件
+    plugins: ['transform-runtime', 'transform-object-rest-spread']
   }
 }

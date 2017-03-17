@@ -40,7 +40,7 @@
 </template>
 
 <script>
-
+import { mapState, mapGetters } from 'vuex'
 export default {
   data () {
     return {
@@ -51,8 +51,8 @@ export default {
     updateActiveNote(note) {this.$store.dispatch('updateActiveNote', note)}
   },
   computed: {
-    notes() {return this.$store.getters.notes},
-    activeNote() {return this.$store.getters.activeNote},
+    notes() {return this.$store.state.note.notes},
+    activeNote() {return this.$store.state.note.activeNote},
     filteredNotes() {
       if(this.show === 'all') {
         return this.notes
@@ -60,6 +60,35 @@ export default {
         return this.notes.filter(note => note.favorite)
       }
     }
-  }
+  },
+  /*computed: mapState({
+    notes: state => state.note.notes,
+    activeNote: state => state.note.activeNote,
+    filteredNotes() {
+      if(this.show === 'all') {
+        return this.notes
+      } else if(this.show === 'favorites') {
+        return this.notes.filter(note => note.favorite)
+      }
+    }
+  }),*/
+  /*computed: {
+    // notes() {return this.$store.getters.notes},
+    // activeNote() {return this.$store.getters.activeNote},
+
+    ...mapGetters([
+        'notes', 'activeNote'
+      ]),
+    filteredNotes() {
+      if(this.show === 'all') {
+        return this.notes
+      } else if(this.show === 'favorites') {
+        return this.notes.filter(note => note.favorite)
+      }
+    }
+  },*/
+  created() {
+    console.log(this.notes)
+  },
 }
 </script>

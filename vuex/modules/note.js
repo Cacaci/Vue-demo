@@ -38,12 +38,15 @@ const mutations = {
 }
 
 const getters = {
-  notes: function(state) {
+/*notes: function(state) {
     return state.notes
   },
   activeNote: function(state) {
     return state.activeNote
-  }
+  }*/
+  notes: state => { return state.notes },
+  activeNote: state => { return state.activeNote }
+
 }
 
 export default {

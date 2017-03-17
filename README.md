@@ -29,8 +29,8 @@ npm run build
 
 ### 关于demo
 
-你可以从[Github Repo](https://github.com/coligo-io/notes-app-vuejs-vuex)下载vuex1.0的源码，这里是[demo](https://coligo-io.github.io/notes-app-vuejs-vuex)的地址。  
+你可以从原作者的[Github Repo](https://github.com/coligo-io/notes-app-vuejs-vuex)下载vuex1.0的源码，这里是[demo](https://coligo-io.github.io/notes-app-vuejs-vuex)的地址。  
 
-当然，你也可以参考我github上的[改写后的源码](https://github.com/bonzstars/Vue-demo)，这里是我的[demo](https://bonzstars.github.io/Vue-demo/)地址。
+当然，你也可以参考我github上的**改写后的源码**，这里是[demo](https://bonzstars.github.io/Vue-demo/)地址。
 
 Segmentfault社区也有人翻译了作者的[原文](https://coligo.io/learn-vuex-by-building-notes-app/)，[译文](https://segmentfault.com/a/1190000005015164)，有兴趣的同学可以参考一下，对比vuex1.0和vuex2.0的一些差异。
