@@ -34,3 +34,8 @@ npm run build
 当然，你也可以参考我github上的**改写后的源码**，这里是[demo](https://bonzstars.github.io/Vue-demo/)地址。
 
 Segmentfault社区也有人翻译了作者的[原文](https://coligo.io/learn-vuex-by-building-notes-app/)，[译文](https://segmentfault.com/a/1190000005015164)，有兴趣的同学可以参考一下，对比vuex1.0和vuex2.0的一些差异。
+
+### 使用webpack2打包
+
+使用webpack2稍微做了调整  
+关于webpack2的相关教程，可参考[这边博文](http://www.qinshenxue.com/article/20161118151423.html)
