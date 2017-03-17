@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="note">
     <toolbar></toolbar>
     <notes-list></notes-list>
     <editor></editor>
