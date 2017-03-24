@@ -11,6 +11,7 @@
 <script>
 
 export default {
+  // 在计算属性中获取状态
   computed: {
   	activeNoteText() {return this.$store.getters.activeNote.text}
   },

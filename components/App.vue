@@ -7,11 +7,13 @@
 </template>
 
 <script>
+// 引入子组件
 import Toolbar from './Toolbar.vue'
 import NotesList from './NotesList.vue'
 import Editor from './Editor.vue'
 
 export default {
+  // 注册组件
   components: {
     Toolbar,
     NotesList,

@@ -51,6 +51,7 @@ export default {
     updateActiveNote(note) {this.$store.dispatch('updateActiveNote', note)}
   },
   computed: {
+    // 既可以在局部状态中直接获取状态，也可以通过模块定义的getters中获取状态
     notes() {return this.$store.state.note.notes},
     activeNote() {return this.$store.state.note.activeNote},
     filteredNotes() {
@@ -62,6 +63,7 @@ export default {
     }
   },
   /*computed: mapState({
+    // 箭头函数，当只有一个参数是，可省略();当只有一条语句是，可以省略return
     notes: state => state.note.notes,
     activeNote: state => state.note.activeNote,
     filteredNotes() {
