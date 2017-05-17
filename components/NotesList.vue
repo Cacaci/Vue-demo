@@ -122,7 +122,7 @@ export default {
   padding: 0;
 }
 #notes-list .container .list-group-item {
-  border: 0;
+  border: none;
   border-radius: 0;
 }
 .list-group-item-heading {
