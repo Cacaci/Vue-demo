@@ -9,10 +9,10 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 export default {
   computed: {
-  	activeNote() {return this.$store.getters.activeNote}
+    ...mapGetters(['activeNote'])
   },
   /*methods: {
   	addNote() {this.$store.dispatch('addNote')},
@@ -20,7 +20,6 @@ export default {
   	toggleFavorite() {this.$store.dispatch('toggleFavorite')}
   }*/
   methods: {
-    // 使用该方法需要配置babel，详见webpack.config.js
     ...mapActions([
         'addNote', 'deleteNote', 'toggleFavorite'
       ])

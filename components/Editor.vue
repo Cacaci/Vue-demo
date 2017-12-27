@@ -9,11 +9,9 @@
 </template>
 
 <script>
-
 export default {
-  // 在计算属性中获取状态
   computed: {
-  	activeNoteText() {return this.$store.getters.activeNote.text}
+    activeNoteText() {return this.$store.getters.activeNote.text}
   },
   methods: {
   	editorNote(e) {this.$store.dispatch('editNote', e.target.value)}

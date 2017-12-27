@@ -25,8 +25,9 @@
     <!-- render notes in a list -->
     <div class="container">
       <div class="list-group">
-        <a v-for="note in filteredNotes"
-          class="list-group-item" href="#"
+        <a v-for="(note, index) in filteredNotes"
+          :key="index"
+          class="list-group-item" href="javascript:void(0);"
           :class="{active: activeNote === note}"
           @click="updateActiveNote(note)">
           <h4 class="list-group-item-heading">
@@ -40,7 +41,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex'
+import { mapState, mapGetters, mapActions } from 'vuex'
 export default {
   data () {
     return {
@@ -48,18 +49,16 @@ export default {
     }
   },
   methods: {
-    updateActiveNote(note) {this.$store.dispatch('updateActiveNote', note)}
+    ...mapActions(['updateActiveNote'])
   },
   computed: {
-    // 既可以在局部状态中直接获取状态，也可以通过模块定义的getters中获取状态
-    notes() {return this.$store.state.note.notes},
-    activeNote() {return this.$store.state.note.activeNote},
+    ...mapState({
+      notes: ({note}) => note.notes,
+      activeNote: ({note}) => note.activeNote
+    }),
     filteredNotes() {
-      if(this.show === 'all') {
-        return this.notes
-      } else if(this.show === 'favorites') {
-        return this.notes.filter(note => note.favorite)
-      }
+      const notes = this.notes
+      return this.show === 'all' ? notes : notes.filter(note => note.favorite)
     }
   },
   /*computed: mapState({
@@ -88,10 +87,7 @@ export default {
         return this.notes.filter(note => note.favorite)
       }
     }
-  },*/
-  created() {
-    console.log(this.notes)
-  },
+  }*/
 }
 </script>
 

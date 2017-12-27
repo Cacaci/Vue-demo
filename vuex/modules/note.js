@@ -44,8 +44,8 @@ const getters = {
   activeNote: function(state) {
     return state.activeNote
   }*/
-  notes: state => { return state.notes },
-  activeNote: state => { return state.activeNote }
+  notes: state => state.notes,
+  activeNote: state => state.activeNote
 
 }
 
